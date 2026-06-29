@@ -1,0 +1,24 @@
+# Exclude Python cache
+__pycache__
+*.py[cod]
+
+# Exclude virtual environment
+.venv
+venv
+ENV
+env
+
+# Exclude git metadata
+.git
+
+# Exclude local envs and logs
+.env
+*.log
+
+# Exclude editor folders
+.vscode
+.idea
+
+# Exclude artifacts
+ngrok.exe
+ngrok.zip

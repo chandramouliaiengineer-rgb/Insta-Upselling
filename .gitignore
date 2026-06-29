@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*$py.class
+.pytest_cache/
+.pytest_cache
+.pyre/
+.mypy_cache/
+.python-version
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variables
+.env
+.env.*
+
+# Docker
+docker-compose.override.yml
+*.dockerfile
+
+# Local database files and volumes
+postgres_data/
+redis_data/
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+.DS_Store
+
+# ngrok artifacts
+ngrok.exe
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+*.egg-info/
+.dist-info/
+build/
+dist/
+
+# Alembic migrations
+alembic/versions/
+
+# PyCharm
+*.iml
+
+# Temporary files
+*.tmp
+*~
