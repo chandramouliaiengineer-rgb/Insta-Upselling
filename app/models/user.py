@@ -16,6 +16,7 @@ class User(Base):
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     instagram_user_id = Column(String, unique=True, nullable=False)
+    messaging_psid = Column(String, unique=True, nullable=True)  # NEW - real messaging ID, captured from private reply response
     username = Column(String, nullable=False)
     email = Column(String, nullable=True)
     whatsapp = Column(String, nullable=True)

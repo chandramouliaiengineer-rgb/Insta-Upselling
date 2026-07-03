@@ -4,7 +4,7 @@ import redis.asyncio as aioredis
 from app.config import settings
 from app.services.meta_api import get_posts
 from app.services.sync import sync_posts, sync_comments
-from app.services.seed import seed_freebies
+from app.services.seed import seed_repos
 
 router = APIRouter()
 
@@ -55,8 +55,8 @@ async def test_sync():
             "comments_saved": comments_saved
         }
 
-@router.get("/seed-freebies")
-async def seed_freebies_endpoint():
+@router.get("/seed-repos")
+async def seed_repos_endpoint():
     async with AsyncSessionLocal() as db:
-        await seed_freebies(db)
-        return {"status": "ok", "message": "Freebies seeded"}
+        await seed_repos(db)
+        return {"status": "ok", "message": "Repos seeded"}
